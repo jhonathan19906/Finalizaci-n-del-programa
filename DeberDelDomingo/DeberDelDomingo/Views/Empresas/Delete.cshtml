@@ -1,0 +1,26 @@
+﻿@model DeberDelDomingo.Models.Empresa
+
+@{
+    ViewData["Title"] = "Eliminar nombre de la empresa";
+}
+
+<center><h1>Eliminar nombre de la empresa</h1></center>
+
+<div>
+    <h4>Empresa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar empresa" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>
